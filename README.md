@@ -7,7 +7,8 @@ notes, exercises and assignments of *Stanford CS224n: Natural Language Processin
 * 想讨论的问题，可在自己仓库发 issue
 
 Note that the new cs224n is the merger of previous cs224n and cs224d.
-新的 cs224n 是合并了原来的 cs224n 和 cs224。
+
+新的 cs224n 是合并了原来的 cs224n 和 cs224d。
 
 links:
 - [new cs224n syllabus](http://web.stanford.edu/class/cs224n/syllabus.html)
