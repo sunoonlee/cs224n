@@ -30,5 +30,9 @@ word2vec 的基本架构并不复杂，不过是一个单隐层神经网络，�
 
 word2vec 采用的基本模型用两种，一是上面文章里介绍的 skip-gram，二是 continuous bag-of-words(CBOW)。区别是前者由中心词预测 context，后者则相反。前者应用更广。
 
-word2vec 的具体训练方法就是更高级的话题了，涉及很多工程上的考虑。常用的两种高效的方法，一是 negative sampling, 二是 hierarchical softmax (这个真没看懂)。Chris McCormick 还写过一篇 [Word2Vec Tutorial Part 2 - Negative Sampling](http://mccormickml.com/2017/01/11/word2vec-tutorial-part-2-negative-sampling/)，介绍了 word2vec 改善性能的一些方法，重点介绍的就是 negative sampling。
+word2vec 的具体训练方法就是更高级的话题了，涉及很多工程上的考虑。常用的两种高效的方法，一是 negative sampling, 二是 hierarchical softmax (这个真没看懂)。Chris McCormick 还写过一篇 [Word2Vec Tutorial Part 2 - Negative Sampling](http://mccormickml.com/2017/01/11/word2vec-tutorial-part-2-negative-sampling/)，介绍了 word2vec 作者提出的改进 skip-gram model 的一些方法，包括：
+* 把 word pairs、phrases 看做整体处理
+* 必要时忽略 the 这种高频词
+* negative sampling, 这是文章的重点
 
+Negative sampling 是指，通过在训练时的近似处理，大大减小每条 training example 更新 weights 矩阵的计算量(注意这里的 sampling 跟输入的样本不是一个概念)。具体来说，本来每个 training example 会让 weights 矩阵中所有词对应的行或列都更新一遍，但实际上这条 example 只对应一个 true word，对其余所有的 negative words 对应的权重影响很小，因此可以只从中选最高频的几个(5-20 个)。
