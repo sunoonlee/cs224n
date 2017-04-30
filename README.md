@@ -10,7 +10,7 @@ Note that the new cs224n is the merger of previous cs224n and cs224d.
 * assignments: 四次作业
 * 想讨论的问题，可在自己仓库发 issue
 
-links:
+Links:
 - [syllabus](http://web.stanford.edu/class/cs224n/syllabus.html)
 - [youtube videos](https://www.youtube.com/playlist?list=PL3FW7Lu3i5Jsnh1rnUwq_TcylNr7EkRe6)
 - 一起学: [召集 issue](https://github.com/sunoonlee/cs224n/issues/1) / [xpgeng](https://github.com/xpgeng/cs224n/) / [ruibofeng](https://github.com/ruibofeng/cs224n) / [sunoonlee](https://github.com/sunoonlee/cs224n) / ...
